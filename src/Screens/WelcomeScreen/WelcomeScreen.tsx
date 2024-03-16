@@ -1,12 +1,32 @@
-import React from "react";
-import { SafeAreaView, Text } from "react-native";
+import React, { useEffect } from "react";
+import { Image, SafeAreaView, Text, View } from "react-native";
 import styles from "./WelcomeScreen.Style.tsx";
-const WelcomeScreen= () => {
+
+//@ts-ignore
+const WelcomeScreen= ({navigation}) => {
+
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      navigation.navigate('HomePage');
+    }, 5000); // 5 seconds delay
+    return () => clearTimeout(timeoutId); // Cleanup on unmount
+  }, []);
+
+  const myImage = require('../../assets/recipe-book.png');
+
   return(
-    <SafeAreaView>
-      <Text>
-        This is WelcomeScreen
-      </Text>
+    <SafeAreaView style={styles.OuterContainer}>
+      <Image source={myImage} style={styles.image} />
+      <View style={styles.container}>
+        <Text style={styles.title}>
+          React-Native
+        </Text>
+        <Text style={styles.subtitle}>
+          Recipe App
+        </Text>
+
+      </View>
     </SafeAreaView>
   )
 };
