@@ -6,7 +6,7 @@ const CategoryPage = () => {
   return (
     <SafeAreaView>
       <Text>
-        This is Categor Page
+        Category
       </Text>
 
     </SafeAreaView>

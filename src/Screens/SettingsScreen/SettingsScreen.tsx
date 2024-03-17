@@ -6,7 +6,7 @@ const SettingsScreen= () => {
   return(
     <SafeAreaView>
       <Text>
-        Products Page
+        Settings
       </Text>
     </SafeAreaView>
   )
