@@ -12,7 +12,7 @@ export default StyleSheet.create({
     height:250,
     resizeMode:"contain",
     alignItems:"center",
-    marginVertical:15,
+    marginBottom:50,
 
   },
   button:{
