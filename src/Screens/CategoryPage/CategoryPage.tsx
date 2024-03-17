@@ -1,16 +1,43 @@
 import React from "react";
-import { SafeAreaView, Text } from "react-native";
-import styles from "./CategoryPage.Style.tsx";
+import { FlatList, SafeAreaView, Text,} from "react-native";
+import Config from "react-native-config";
+import LoadingAnimation from "../../Components/Loading/Loading.tsx";
+import ErrorAnimation from "../../Components/Error/Error.tsx";
+import ProductCard from "../../Components/ProductCard/ProductCard.tsx";
+import useFetch from "../../Hooks/useFetch.tsx";
 
-const CategoryPage = () => {
+
+// @ts-ignore
+const Product = ({navigation}) => {
+
+  const {loading, data, error} = useFetch(Config.API_URL_CAT);
+
+  //@ts-ignore
+  const handleProductSelect = id => {
+    navigation.navigate("Details",{id});
+  };
+
+  // @ts-ignore
+  const renderProduct = ({item}) => (
+    <ProductCard products={item}/>
+  );
+
+
+  if (loading) {
+    return <LoadingAnimation/>
+  }
+
+  if (error) {
+    return <ErrorAnimation/>
+  }
+
   return (
     <SafeAreaView>
-      <Text>
-        Category
-      </Text>
-
+      <FlatList data={data} renderItem={renderProduct}/>
     </SafeAreaView>
-  );
-};
+  )
 
-export default CategoryPage;
+
+}
+
+export default Product;

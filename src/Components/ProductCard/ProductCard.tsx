@@ -1,14 +1,21 @@
 import React from "react";
-import { SafeAreaView, Text, View } from "react-native";
-import styles from "./ProductCard.Style.tsx"
-const ProductCard = () => {
+import { View, Text, SafeAreaView, Image } from "react-native";
+import styles from "./ProductCard.Style.tsx";
+
+//@ts-ignore
+const ProductCard = ({ products }) => {
   return (
-    <View>
-      <Text>
-        ProductCard
-      </Text>
-    </View>
+    <SafeAreaView>
+      <View style={styles.Container}>
+        <Image style={styles.image} source={{ uri: products.strCategoryThumb }} />
+        <View style={styles.Body}>
+          <Text style={styles.Title}>
+            {products.strCategory}
+          </Text>
+        </View>
+      </View>
+    </SafeAreaView>
+
   );
 };
-
 export default ProductCard;

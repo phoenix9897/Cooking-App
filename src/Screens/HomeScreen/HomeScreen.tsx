@@ -36,7 +36,6 @@ const App = () => {
         component={ProfileScreen}
         options={{
           tabBarIcon: ({ color, size }) => {
-            console.log("Icon props:", { color, size }); // Log props for debugging
             return <Icon name="person" color={color} size={size} />;
           }
         }}

@@ -1,15 +1,17 @@
 import React from "react";
-import { SafeAreaView, Text } from "react-native";
-import styles from "./ProductsPage.Style.tsx";
+import { FlatList, SafeAreaView, Text,} from "react-native";
 
-const ProductsPage= () => {
-  return(
+// @ts-ignore
+const Product = ({navigation}) => {
+
+
+  return (
     <SafeAreaView>
-      <Text>
-        Products Page
-      </Text>
+      <Text>Those are Products!!!</Text>
     </SafeAreaView>
   )
-};
 
-export default ProductsPage;
+
+}
+
+export default Product;
