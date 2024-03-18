@@ -6,14 +6,9 @@ import styles from "./ProductCard.Style.tsx";
 const ProductCard = ({ products }) => {
   return (
     <SafeAreaView>
-      <View style={styles.Container}>
-        <Image style={styles.image} source={{ uri: products.strCategoryThumb }} />
-        <View style={styles.Body}>
-          <Text style={styles.Title}>
-            {products.strCategory}
-          </Text>
-        </View>
-      </View>
+      <Text>
+        This is product card
+      </Text>
     </SafeAreaView>
 
   );
