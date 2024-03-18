@@ -10,13 +10,14 @@ function useFetch(url: any) {
   const [error, setError] = useState(null);
 
   const fetchData = async () => {
-    try {// @ts-ignore
-      const { data: responseData } = await axios.get(url);
-      const categories = responseData.categories;
-      setData(categories);
+    try {
+      const response = await axios.get(url);
+      const responseData = response.data; // Access the actual data from the response
+      console.log("Fetched data:", responseData.meals); // Log the data to console
+      setData(responseData.meals);
       setLoading(false);
     } catch (err) {
-      setLoading(false);
+      console.error("Error fetching data:", err); // Log any errors in case fetching fails
     }
   };
 

@@ -1,16 +1,22 @@
 import React from "react";
-import { View, Text, SafeAreaView, Image } from "react-native";
+import { View, Text, SafeAreaView, TouchableWithoutFeedback } from "react-native";
 import styles from "./ProductCard.Style.tsx";
+import { Image } from "react-native";
 
 //@ts-ignore
-const ProductCard = ({ products }) => {
+const ProductCard = ({ products ,onSelect}) => {
   return (
-    <SafeAreaView>
-      <Text>
-        This is product card
-      </Text>
-    </SafeAreaView>
+    <TouchableWithoutFeedback onPress={onSelect}>
+      <View style={styles.container}>
+        <Image source={{ uri: products.strMealThumb }} style={styles.image} />
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>{products.strMeal}</Text>
+        </View>
+      </View>
+    </TouchableWithoutFeedback>
 
   );
 };
 export default ProductCard;
+
+

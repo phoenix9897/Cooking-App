@@ -13,8 +13,8 @@ const Category = ({ navigation }) => {
   const { loading, data, error } = useFetch(Config.API_URL_CAT);
 
   //@ts-ignore
-  const handleCategorySelect = id => {
-    navigation.navigate("Products", { id });
+  const handleCategorySelect = name => {
+    navigation.navigate("Products", { name });
   };
 
   // @ts-ignore

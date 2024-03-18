@@ -1,37 +1,33 @@
-import {StyleSheet} from "react-native";
+import { Dimensions, StyleSheet } from 'react-native'
+
+const deviceSize = Dimensions.get('window');
 
 export default StyleSheet.create({
-  Image: {
-    width:100,
-    minHeight:100,
-    resizeMode:"contain",
-    backgroundColor:"white"
-  },
-  Price: {
-    textAlign:'right',
-    fontSize:14,
-    fontStyle:'italic',
-  },
-  Title: {
-    fontWeight: 'bold',
-    fontSize:22,
-  },
-  Body: {
-    flex: 1,
-    padding:5,
-    justifyContent:'space-between'
-  },
-  Container: {
-    backgroundColor: '#e0e0e0',
-    borderColor: '#bdbdbd',
-    borderWidth:1,
+  container: {
     margin: 10,
-    flexDirection: 'row'
   },
   image: {
-    width:50,
-    height:50,
-    resizeMode:"contain",
+    minHeight: deviceSize.height / 5,
+    minWidth: deviceSize.width / 3,
+    justifyContent: "flex-end",
+    resizeMode: "cover",
+    overflow: 'hidden',
+    borderRadius: 15,
+  },
+  titleContainer: {
+    position: 'absolute',
+    width: '100%',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    padding: 10,
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+    bottom: 0,
+  },
+  title: {
+    color: 'white',
+    fontSize: 20,
+    lineHeight: 20,
+    fontWeight: 'bold',
+    textAlign: "right",
   }
-
-});
+})
