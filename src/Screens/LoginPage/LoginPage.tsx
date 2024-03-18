@@ -1,11 +1,8 @@
 import React from "react";
-import { Button, Image, SafeAreaView, Text, TouchableOpacity, View } from "react-native";
+import {Image, SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 import styles from "./LoginPage.Style.tsx";
 
 const myImage = require("../../assets/recipe-book.png");
-
-
-
 
 //@ts-ignore
 const LoginPage = ({navigation}) => {

@@ -1,11 +1,9 @@
 import React from "react";
-import { FlatList, SafeAreaView, Text } from "react-native";
+import { FlatList, SafeAreaView} from "react-native";
 import useFetch from "../../Hooks/useFetchDetail.tsx";
 import Config from "react-native-config";
 import LoadingAnimation from "../../Components/Loading/Loading.tsx";
 import ErrorAnimation from "../../Components/Error/Error.tsx";
-import ProductCard from "../../Components/ProductCard/ProductCard.tsx";
-import DetailCard from "../../Components/ProductDetailCard/ProductDetailCard.tsx";
 import MealDetailCard from "../../Components/ProductDetailCard/ProductDetailCard.tsx";
 
 // @ts-ignore

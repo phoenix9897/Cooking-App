@@ -13,7 +13,7 @@ AppRegistry.registerComponent("App", () => App);
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={"HomePage"}>
+      <Stack.Navigator initialRouteName={"WelcomeScreen"}>
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="LoginPage" component={LoginPage} options={{ headerShown: false }} />
         <Stack.Screen name="HomePage" component={HomePage} options={{ headerShown: false }} />

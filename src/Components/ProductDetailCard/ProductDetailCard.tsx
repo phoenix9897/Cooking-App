@@ -1,9 +1,13 @@
 import React from 'react';
-import { View, Text, Image} from 'react-native';
+import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
 import styles from './ProductDetailCard.Style.tsx';
 
 // @ts-ignore
 const MealDetailCard = ({ meal }) => {
+  const openVideo = () => {
+    const videoUrl = meal.strYoutube;
+    Linking.openURL(videoUrl);
+  };
 
   return (
     <View style={styles.container}>
@@ -13,6 +17,9 @@ const MealDetailCard = ({ meal }) => {
         <Text style={styles.country} >{meal.strArea}</Text>
       </View>
       <Text style={styles.description} >{meal.strInstructions} </Text>
+      <TouchableOpacity style={styles.button} onPress={openVideo}>
+        <Text style={{ color: '#fff' }}>Videoyu İzle</Text>
+      </TouchableOpacity>
     </View>
   )
 }

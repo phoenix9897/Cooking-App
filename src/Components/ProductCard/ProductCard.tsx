@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, SafeAreaView, TouchableWithoutFeedback } from "react-native";
+import { View, Text, TouchableWithoutFeedback } from "react-native";
 import styles from "./ProductCard.Style.tsx";
 import { Image } from "react-native";
 

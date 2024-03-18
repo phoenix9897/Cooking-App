@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Config from "react-native-config";
-
 
 function useFetch(url: any) {
 

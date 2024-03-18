@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, Image, SafeAreaView, Text, View } from "react-native";
+import { FlatList, View } from "react-native";
 import useFetch from "../../Hooks/useFetchMeal.tsx";
 import Config from "react-native-config";
 import LoadingAnimation from "../../Components/Loading/Loading.tsx";
