@@ -13,7 +13,6 @@ function useFetch(url: any) {
     try {
       const response = await axios.get(url);
       const responseData = response.data; // Access the actual data from the response
-      console.log("Fetched data:", responseData.meals); // Log the data to console
       setData(responseData.meals);
       setLoading(false);
     } catch (err) {

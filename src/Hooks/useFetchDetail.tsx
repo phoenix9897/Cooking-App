@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Config from "react-native-config";
-
 
 function useFetch(url: any) {
 
@@ -12,8 +10,8 @@ function useFetch(url: any) {
   const fetchData = async () => {
     try {// @ts-ignore
       const { data: responseData } = await axios.get(url);
-      const categories = responseData.categories;
-      setData(categories);
+      const details = responseData.meals;
+      setData(details);
       setLoading(false);
     } catch (err) {
       setLoading(false);
