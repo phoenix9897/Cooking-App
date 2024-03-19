@@ -19,7 +19,6 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     margin: 10,
-
   },
   country: {
     color: '#a52a2a',
