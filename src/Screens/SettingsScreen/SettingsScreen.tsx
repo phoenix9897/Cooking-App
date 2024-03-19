@@ -1,8 +1,16 @@
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useEffect } from "react";
+import { View, Text, TouchableOpacity, BackHandler } from "react-native";
 import styles from "./SettingsScreen.Style.tsx";
 const SettingsScreen = () => {
 
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+      BackHandler.exitApp();
+      return true;
+    });
+
+    return () => backHandler.remove();
+  }, []);
   return (
     <View style={styles.container}>
       <View style={styles.setting}>
@@ -16,7 +24,7 @@ const SettingsScreen = () => {
       <TouchableOpacity style={styles.option}>
         <Text style={styles.optionText}>About Us</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.logoutButton}>
+      <TouchableOpacity style={styles.logoutButton} onPress={() => BackHandler.exitApp()}>
         <Text style={styles.logoutText}>Logout</Text>
       </TouchableOpacity>
     </View>
