@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { View, Text, TouchableOpacity, BackHandler } from "react-native";
 import styles from "./SettingsScreen.Style.tsx";
+import Accordion from 'react-native-collapsible/Accordion';
+
 const SettingsScreen = () => {
 
   useEffect(() => {
@@ -11,6 +13,7 @@ const SettingsScreen = () => {
 
     return () => backHandler.remove();
   }, []);
+
   return (
     <View style={styles.container}>
       <View style={styles.setting}>
