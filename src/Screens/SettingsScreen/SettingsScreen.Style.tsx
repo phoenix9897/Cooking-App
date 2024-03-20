@@ -36,5 +36,12 @@ export default StyleSheet.create({
     fontWeight:"bold",
     fontSize: 16,
     textAlign: "center"
+  },
+  subHeader: {
+    backgroundColor : "#2089dc",
+    color : "white",
+    textAlign : "center",
+    paddingVertical : 5,
+    marginBottom : 10
   }
 });
